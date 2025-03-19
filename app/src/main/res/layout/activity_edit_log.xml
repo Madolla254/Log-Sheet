@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditLogActivity">
+
+    <Button
+        android:id="@+id/btnSharePDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="536dp"
+        android:layout_marginEnd="16dp"
+        android:text="Share as PDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/inputRow1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Operator Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextLogNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Log number"
+            android:inputType="number" />
+    </LinearLayout>
+
+<LinearLayout
+android:id="@+id/inputRow2"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+app:layout_constraintTop_toBottomOf="@id/inputRow1"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_margin="16dp">
+
+<EditText
+    android:id="@+id/editTextDate"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Date"
+    android:inputType="date"
+    android:layout_weight="1" />
+
+<EditText
+    android:id="@+id/editTextStartTime"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Start Time"
+    android:inputType="time"
+    android:layout_weight="1" />
+
+</LinearLayout>
+
+<LinearLayout
+android:id="@+id/inputRow3"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+app:layout_constraintTop_toBottomOf="@id/inputRow2"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_margin="16dp">
+
+<EditText
+    android:id="@+id/editTextEndTime"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="End Time"
+    android:inputType="time"
+    android:layout_weight="1" />
+
+<EditText
+    android:id="@+id/editTextLocation"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Location"
+    android:inputType="text"
+    android:layout_weight="1" />
+</LinearLayout>
+
+<LinearLayout
+android:id="@+id/inputRow4"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+app:layout_constraintTop_toBottomOf="@id/inputRow3"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_margin="16dp">
+
+<EditText
+    android:id="@+id/editTextBattery"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Battery"
+    android:inputType="text"
+    android:layout_weight="1" />
+
+<EditText
+    android:id="@+id/editTextTotalFlightTime"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Total Flight Time"
+    android:inputType="text"
+    android:layout_weight="1" />
+</LinearLayout>
+
+<EditText
+android:id="@+id/editTextComments"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:hint="Comments"
+    android:maxLength="186"
+android:inputType="textMultiLine"
+app:layout_constraintTop_toBottomOf="@id/inputRow4"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_margin="16dp"
+android:minLines="3" />
+
+<CheckBox
+android:id="@+id/checkBoxPreflight"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Preflight Check"
+app:layout_constraintTop_toBottomOf="@id/editTextComments"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_margin="16dp" />
+
+<CheckBox
+android:id="@+id/checkBoxPackaging"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Packaging"
+app:layout_constraintTop_toBottomOf="@id/checkBoxPreflight"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_margin="16dp" />
+
+<CheckBox
+android:id="@+id/checkBoxHomeBase"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Home Base Operation"
+app:layout_constraintTop_toBottomOf="@id/checkBoxPackaging"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxHomeBase" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
